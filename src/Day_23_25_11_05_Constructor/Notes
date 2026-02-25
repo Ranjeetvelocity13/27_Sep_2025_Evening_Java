@@ -1,0 +1,114 @@
+Constructor in Java
+
+A constructor in Java is a special method used to initialize objects.
+It is automatically called when an instance (object) of a class is created.
+
+Constructors have the same name as the class and do not have any return type, not even void.
+Every time an object is created using the new keyword, at least one constructor is called.
+
+If no constructor is explicitly declared in a class, the Java compiler automatically provides a default constructor during compilation.
+
+======================================================================================================
+
+Rules for Creating a Java Constructor
+
+The constructor name must be exactly the same as the class name.
+Constructors cannot be declared inside methods or other constructors — they must be declared directly inside the class body.
+
+Constructors must not specify a return type (not even void).
+If a return type is specified, it becomes a regular method, not a constructor.
+Only access modifiers are allowed — public, protected, private, or package-private (no modifier).
+Not allowed: static, final, abstract, or native.
+You can declare more than one constructor in a class (constructor overloading).
+Each constructor must have a different parameter list.
+
+======================================================================================================
+
+Types of Constructors
+Default Constructor
+User-defined Constructor
+
+1. Default Constructor
+Definition:
+
+If a constructor is not explicitly declared in a Java class, the compiler automatically provides one during compilation.
+This automatically provided constructor is called the default constructor.
+
+======================================================================================================
+Rules of the Default Constructor:
+
+It is always a zero-argument (no-parameter) constructor.
+The access modifier of the default constructor is the same as that of the class.
+It contains an implicit call to super(), which invokes the parent class constructor.
+It initializes the object with default values:
+
+Numeric types → 0
+Boolean → false
+Object references → null
+
+The default constructor is provided only if no other constructor is declared by the programmer.
+
+2. User-defined Constructor
+
+If a programmer explicitly declares a constructor in a Java class, it is called a user-defined constructor.
+User-defined constructors can be of two types:
+
+Zero-parameter constructor (also called no-argument constructor)
+→ Declared explicitly by the programmer without parameters.
+
+Parameterized constructor
+→ Declared with one or more parameters to initialize object variables with custom values.
+
+
+======================================================================================================
+
+
+Constructor Chaining in Java
+
+Definition:
+
+Constructor Chaining in Java is the process of calling one constructor from another constructor within 
+the same class or from the parent class.
+It helps to reuse constructor code and avoid duplication when multiple constructors perform similar initialization tasks.
+
+
+
+Purpose of Constructor Chaining
+
+To reuse code between multiple constructors.
+To initialize an object in multiple ways using constructor overloading.
+To avoid redundancy by centralizing common initialization logic.
+
+======================================================================================================
+
+s
+Types of Constructor Chaining
+
+Constructor chaining can occur in two ways:
+Within the same class (using this())
+From parent class to child class (using super())
+
+======================================================================================================
+
+
+| **Point of Comparison**   | **Constructor**                                                                                            | **Method**                                                                           |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Definition**            | A constructor is a special block of code used to **initialize objects** when they are created.             | A method is a block of code used to **define the behavior or actions** of an object. |
+| **Name**                  | Must have the **same name as the class**.                                                                  | Can have **any valid name**, not necessarily same as the class.                      |
+| **Return Type**           | **No return type**, not even `void`.                                                                       | Must have a **return type**, which can be `void` or any data type.                   |
+| **When Called**           | Automatically called **when an object is created** using `new`.                                            | Called **explicitly** using the object name or class name.                           |
+| **Purpose**               | Used to **initialize** object variables.                                                                   | Used to **perform operations** or **define behavior**.                               |
+| **Invocation**            | Called **implicitly** during object creation.                                                              | Called **explicitly** by the programmer.                                             |
+| **Inheritance**           | **Not inherited**, but can be called from child class using `super()`.                                     | **Inherited** by subclass and can be overridden.                                     |
+| **Overloading**           | Can be **overloaded** (multiple constructors with different parameters).                                   | Can be **overloaded** and **overridden**.                                            |
+| **Modifiers**             | Can use only **access modifiers** (`public`, `private`, etc.). Cannot be `static`, `final`, or `abstract`. | Can use various modifiers like `static`, `final`, `synchronized`, `abstract`, etc.   |
+| **Return Statement**      | Does not return any value. Cannot use `return` to send a value.                                            | Can return a value using the `return` keyword (unless `void`).                       |
+| **Call to Superclass**    | Always calls the parent constructor (implicitly or explicitly).                                            | Does not automatically call parent class methods.                                    |
+| **Use of `this` keyword** | Used to call another constructor within the same class using `this()`.                                     | Used to refer to the current object or call another method.                          |
+
+
+======================================================================================================
+
+
+
+
