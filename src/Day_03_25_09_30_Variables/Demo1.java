@@ -18,7 +18,7 @@ public class Demo1 {
 
         // Steps to use variables in Java
         // 1. Variable declaration -- Reserve memory
-    	
+        // 2. Variable declaration -- Reserve memory
         int age; // dataType variableName
 
         // 2. Initialization - Assign value
